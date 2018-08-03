@@ -1,0 +1,147 @@
+@media print {
+
+	.tm-sidebar, 
+	.tm-content-box, 
+	.blocks {
+		display: none;
+	}
+	.tm-main-content {
+		margin-left: 0;
+	}
+	.margin-b-10, 
+	.flex-2-col {
+		display: block;
+		margin-bottom: 0;
+	}
+	h2.tm-section-title {
+		color: #00f;
+	}
+	.flex-item {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.pad {
+		padding: 0;
+    	padding-left: 50px;
+    	text-align: left;
+    	font-size: 120%;
+	}
+	.tm-banner {
+ 	   height: 250px;
+	}
+	.tm-team-description-container {
+    	max-width: none;
+	}
+}
+
+@media screen {
+	.thumbnail {
+		border-radius: 50%;
+	}
+	.box-bg:hover {	
+		background-color: #2FADD5;
+	}
+	.box-bg:hover > h2 {
+		font-weight: bold;
+		color: white;
+	}
+
+	p::first-letter {
+		color: #76cdd7;
+		font-size: 30px;
+		line-height: 0;
+	}
+
+	.tm-sidebar, 
+	.tm-content-box {
+		box-shadow: 0 0 10px grey;
+	}
+
+	section::before, 
+	.margin-b-10::before {
+	    content: '';
+	    position: absolute;
+	    border-right: 130px solid transparent;
+	    border-top: 25px solid #76cdd7;
+	    z-index: 2;
+	}
+	section.blocks::before {
+		border: none;
+	}
+
+	#ideas .tm-section-title {
+		color: #dcdcdc;
+		letter-spacing: 5px;
+	}
+
+	h2 + p {
+		font-style: italic;
+	}
+
+	p {
+		line-height: 2;
+		text-indent: 20px;
+	}
+	.box p {
+		line-height: 1.5;
+		text-indent: 0;
+	}
+
+	.heading h2 {
+		text-align: center;
+		color: #76cdd7;
+	}
+	.heading a:link {
+		color: #000;
+	}
+	.heading a:visited {
+		color: silver;
+	}
+	.heading a:hover {
+		color: #76cdd7;
+		text-decoration-style: double;
+	}
+	.text::after {
+		content: "New";
+		color: red;
+		position: relative;
+		top: -0.5em;
+		font-size: 0.8em;
+	}
+
+	.blocks .box:nth-child(odd) {
+		background-color: #F2F2F2;
+	}
+	.blocks .box p::first-letter {
+		color: #000;
+	}
+	.blocks .box p {
+		font-size: 1.4em;
+		margin-top: 15px;
+	}
+
+	.tm-nav-item {
+		border-bottom: 1px dotted silver;
+	}
+	.tm-nav-item:last-child {
+		border-bottom: none;
+	}
+
+	.form-group input[type="text"], 
+	.contact-form button {
+		color:red;
+	}
+	.contact-form button:hover {
+		color: #fff;
+		background-color: #76cdd7;
+		border: none;
+	}
+	.mandatory-field {
+		position: relative;
+	}
+	.mandatory-field::after {
+		content: "*";
+		position: absolute;
+		color: red;
+	}
+}
