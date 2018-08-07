@@ -1,0 +1,153 @@
+*, body {
+	box-sizing: border-box;
+}
+
+body {
+	margin: auto;
+ 	padding: 0 10%;
+ 	font-family: $font-stack;
+ 	background-color: $main-background-color;
+
+ 	header {
+ 		&::after {
+		    content: "";
+		    clear: both;
+		    display: table;
+		}
+
+	 	.logo {
+	 		float: left;
+	 		width: 33%;
+
+	 		img {
+	 			width: 100%;
+	 		}
+		}
+
+	 	nav {
+	 		float: left;
+	 		width: 67%;
+	 		margin-top: 150px;
+			border: {
+				top: 1px solid $horizontal-rule-color;
+				bottom: 1px solid $horizontal-rule-color;
+			}
+		 	padding: 10px 0;
+		 	
+		    a {
+		  		color: $primary-color;
+		    	text: {
+		   			transform: uppercase;
+		    		decoration: none;
+		    		align: center;
+		    	}
+		    	padding: 10px 30px;
+		    	display: inline-block;
+		    	float: left;
+		    	width: 33.33%;
+		    	
+		    	&:hover {
+				    color: white;
+				    background: $primary-color;
+				    font-weight: bold;
+		   		}
+		    }
+		}
+	}
+
+	.toolbar {
+		text-align: right;
+    	clear: left;
+    	margin-top: 30px;
+    	input {
+	    	border: $primary-color 1px solid;
+	    	padding: 10px 15px;
+	    	background-color: rgba(0,0,0,0);
+	    	&::placeholder {
+	    		color: $primary-color;
+	    	}
+    	}
+    }
+
+	.post-list {
+		article {
+			float: left;
+			margin-top: 2%;
+			width: 48%;
+			background-color: $article-background-color;
+			padding: 1.5%;			
+
+			&:nth-child(odd) {
+				clear: left;
+			}
+			&:nth-child(even) {
+				margin-left: 4%; 
+			}
+
+			img {
+		  		width: 100%;
+		 	}
+
+		 	div {
+		 		padding: 1% 1% 3%;
+
+		 		.post-description {
+		 			color: $articlec-description-color;
+		 			border-bottom: 1px solid $horizontal-rule-color;
+		 		}
+		 		h3 {
+		 			color: $article-heading-color;
+		 			text-transform: uppercase;
+		 			margin: 0;
+		 		}
+		 		p {
+		 			color: $article-paragraph-color;
+		 			margin-top: 0;
+		 			font-size: $article-font-size;
+		 		}
+		 	}
+		}
+	}
+
+	.about, .contact-form {
+		clear: left;
+		padding: 50px 2%;
+		
+		h1, h4 {
+			color: $primary-color;
+			text-align: right;
+			text-transform: uppercase;
+		}
+		p {
+			color: #617F8E;
+		}
+		img {
+			width: 100%;
+		}
+		input, textarea {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 12px;
+			font-family: Arial, sans-serif;
+			background-color: rgba(0,0,0,0);
+			border: 1px solid #999;
+		}
+		button {
+			color: #fff;
+			background-color: $primary-color;
+			float: right;
+			text-transform: uppercase;
+			border: none;
+			padding: 10px 80px;
+
+			&:hover {
+			    background: darken($primary-color, 10%);
+			    font-weight: bold;
+	   		}
+		}
+	}
+	footer {
+		padding: 2%;
+		color: #617F8E;
+	} 	
+}
