@@ -1,0 +1,220 @@
+*, body {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1vw;
+}
+
+.header {
+	color: white;
+	margin: auto;
+	position: relative;
+}
+
+.center {
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+
+.logo {
+	position: absolute;
+	top: 30px;
+	padding-left: 40px;
+	float: left;
+}
+
+.letterSpace {
+	letter-spacing: 5px;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.nav {
+	position: absolute;
+	top: 30px;
+	right: 0;
+	display: inline-block;
+}
+
+.nav a {
+	padding-right: 60px;
+	color: white;
+	text-decoration: none;
+}
+
+.biggerTwice {
+	font-size: 200%;
+}
+
+.h1 {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: normal;
+	font-size: 3vw;
+}
+
+.header p {
+	position: absolute;
+	bottom: 45%;
+	text-transform: capitalize;
+	margin: 0;
+}
+
+.button {
+	position: absolute;
+	bottom: 15%;
+	color: white;
+	border: 1px solid #fff;
+	background-color: rgba(0,0,0,0.4);
+	padding: 10px 50px;
+	margin-top: 50px;
+}
+
+.section1 {
+	white-space: nowrap;
+}
+
+
+.section1 p {
+	display: inline-block;
+	width : 50%;
+	padding: 10% 5% 10% 0%;
+	margin: 0;
+	white-space: normal;
+	vertical-align: top;
+}
+
+.section1 p:first-child {
+	font-size: 170%;
+	padding: 10% 10% 10% 5%;
+}
+
+.section2 {
+	background-color: #F3F3F3;
+	padding: 0 50px 10px;
+}
+
+.header2 {
+	padding: 80px 0 40px;
+	text-align: center;
+	font-size: 120%;
+}
+
+.header2 h2 {
+	font-weight: normal;
+}
+
+.header2 h2 span, .form span {
+	font-weight: bold;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.flex-container>.imgDiv {
+	width: 59%;
+	margin-top: 10px;
+	position: relative;
+}
+
+.imgDiv img {
+	max-width: 100%;
+}
+
+/*.imgDiv img::before {
+	content: 'before';
+	width: 100%;
+	z-index: 1;
+}*/
+
+.imgDiv img {
+	filter: brightness(80%);
+}
+
+.like {
+	color: #000;
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	border: 1px solid #fff;
+	background-color: #E8E8E8;
+	display: inline-block;
+	padding: 2px;
+}
+
+
+.flex-container>.textDiv {
+	width: 40%;
+	text-align: center;
+}
+
+.form {
+	width: 100%;
+	background-color: #fff;
+	padding: 30px;
+	margin: 30px 0;
+}
+
+.input {
+	background-color: #F0F0F0;
+	width: 50%; 
+}
+
+input::placeholder {
+	color: black;
+}
+
+.last p {
+	float: left;
+	color: #9E9E9E;
+}
+
+.navEnd {
+	float: right;
+	display: inline-block;
+}
+
+.navEnd a {
+	display: inline-block;
+	padding-left: 20px;
+	color: #000;
+	text-decoration: none;
+	margin: 12.8px;
+}
+
+footer {
+	padding: 50px;
+}
+
+.flex-container2 {
+	display: flex;
+}
+
+.flex-container2>div{
+
+}
+
+.some {
+color:#B7C8D9
+#FFF
+#F3F3F3
+#A4A4A4
+#F0F0F0
+#000
+#343638
+#E8E8E8
+#9E9E9E;
+}
