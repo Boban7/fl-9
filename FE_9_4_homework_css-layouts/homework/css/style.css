@@ -15,6 +15,11 @@ body {
 	position: relative;
 }
 
+.header img {
+	max-width: 100%;
+	height: auto;
+}
+
 .center {
 	left: 50%;
 	transform: translate(-50%, 0%);
@@ -83,7 +88,7 @@ body {
 }
 
 
-.section1 p {
+.section1 p, .section1 h2 {
 	display: inline-block;
 	width : 50%;
 	padding: 10% 5% 10% 0%;
@@ -92,8 +97,9 @@ body {
 	vertical-align: top;
 }
 
-.section1 p:first-child {
+.section1 h2 {
 	font-size: 170%;
+	font-weight: normal;
 	padding: 10% 10% 10% 5%;
 }
 
@@ -132,6 +138,7 @@ body {
 
 .imgDiv img {
 	max-width: 100%;
+	height: auto;
 }
 
 /*.imgDiv img::before {
@@ -207,14 +214,12 @@ footer {
 
 }
 
-.some {
-color:#B7C8D9
-#FFF
+/*color {
+#B7C8D9
 #F3F3F3
 #A4A4A4
 #F0F0F0
-#000
 #343638
 #E8E8E8
 #9E9E9E;
-}
+}*/
