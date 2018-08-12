@@ -41,10 +41,13 @@
           <h2>Read some of our <span>featured articles</span></h2>
         </header>
         <div class="flex-container">
-          <div class="imgDiv">
+          <div class="imgDiv dark">
             <img src="img/sample.jpg" width="770" height="300" alt="image #1 with laptop on the table"/>
             <div class="like">
-              20 <span></span>
+              <span>172 &#9829;</span>
+            </div>
+            <div class="date">
+              <p>Januari'15 South France</p>
             </div>
           </div>
           <div class="textDiv">
@@ -61,9 +64,21 @@
           </div>
           <div class="imgDiv">
             <img src="img/sample3.jpg" width="770" height="300" alt="image #2 with laptop on the table"/>
+            <div class="like">
+              <span>172 &#9829;</span>
+            </div>
+            <div class="date">
+              <p>Januari'15 South America</p>
+            </div>
           </div>
           <div class="imgDiv">
             <img src="img/sample.jpg" width="770" height="300" alt="image #1 with laptop on the table"/>
+            <div class="like">
+              <span>20 &#9829;</span>
+            </div>
+            <div class="date">
+              <p>Januari'15 South France</p>
+            </div>
           </div>
           <div class="textDiv">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -79,12 +94,26 @@
           </div>
           <div class="imgDiv">
             <img src="img/sample3.jpg" width="770" height="300" alt="image #2 with laptop on the table"/>
+            <div class="like">
+              <span>150 &#9829;</span>
+            </div>
+            <div class="date">
+              <p>January'15 South America</p>
+            </div>
           </div>
         </div>
-        <form class="form" action="#contact" method="get">
-          Subscribe to our <span>newsletter</span>
-          <input type="email" name="imail" id="email" placeholder="Enter your e-mail address" required />
-          <input type="submit" name="submit" value="Subscribe"/>
+      </section>
+      <section class="section3">
+        <form class="form form1" action="#contact" method="get">
+          <div class="flexHeader">
+            <h2>Subscribe to our <span>newsletter</span></h2>
+          </div>
+          <div class="flexInput">
+            <input type="email" name="email" id="email" placeholder="Enter your e-mail address" required />
+          </div>
+          <div>  
+            <input type="submit" name="submit" value="Subscribe"/>
+          </div>
         </form>
       </section>
     </main>
@@ -93,26 +122,30 @@
         <div>
           <h2>Black & White</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         </div>
         <div>
           <h2>Last Tweet</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+          <p>
+            <em>... lit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</em>
+            <br/>
+            <span class="lastTweetSpan">3 hours ago</span>
+          </p>
         </div>
         <div>
           <h2>Contact</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+          <address>
+            www.loremipsumdolar.nl<br/>
+            182 AB Your Street Name<br/>
+            e-mail@loremipsum.com<br/>
+            +(121)01 23 45 679<br/>
+          </address>
         </div>
         <div>
           <h2>Newsletter</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut </p>
-          <form class="form" action="#contact" method="get">
+          <p class="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+          <form class="form form2" action="#contact" method="get">
             <input type="email" name="email" id="email2" placeholder="Enter your e-mail address" required="" />
             <input type="submit" name="submit" value="Subscribe"/>
           </form>

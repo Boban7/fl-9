@@ -1,4 +1,5 @@
-*, body {
+*,
+body {
 	box-sizing: border-box;
 }
 
@@ -88,7 +89,8 @@ body {
 }
 
 
-.section1 p, .section1 h2 {
+.section1 p, 
+.section1 h2 {
 	display: inline-block;
 	width : 50%;
 	padding: 10% 5% 10% 0%;
@@ -103,9 +105,10 @@ body {
 	padding: 10% 10% 10% 5%;
 }
 
-.section2 {
+.section2, 
+.section3 {
 	background-color: #F3F3F3;
-	padding: 0 50px 10px;
+	padding: 0 50px 50px;
 }
 
 .header2 {
@@ -114,11 +117,13 @@ body {
 	font-size: 120%;
 }
 
-.header2 h2 {
+.header2 h2, 
+form h2 {
 	font-weight: normal;
 }
 
-.header2 h2 span, .form span {
+.header2 h2 span, 
+.form span {
 	font-weight: bold;
 }
 
@@ -141,27 +146,30 @@ body {
 	height: auto;
 }
 
-/*.imgDiv img::before {
-	content: 'before';
-	width: 100%;
-	z-index: 1;
-}*/
-
 .imgDiv img {
 	filter: brightness(80%);
 }
 
 .like {
-	color: #000;
+	color: #fff;
 	position: absolute;
-	top: 10px;
+	top: 15px;
 	right: 15px;
-	border: 1px solid #fff;
-	background-color: #E8E8E8;
+	border: 2px solid #fff;
+	background-color: #343638;
 	display: inline-block;
-	padding: 2px;
+	padding: 5px 10px;
+	opacity: 0.8;
+	z-index: 1;
 }
 
+.date {
+	color: #fff;
+	position: absolute;
+	bottom: 15px;
+	left: 20px;
+	z-index: 1;
+}
 
 .flex-container>.textDiv {
 	width: 40%;
@@ -171,8 +179,6 @@ body {
 .form {
 	width: 100%;
 	background-color: #fff;
-	padding: 30px;
-	margin: 30px 0;
 }
 
 .input {
@@ -182,6 +188,12 @@ body {
 
 input::placeholder {
 	color: black;
+}
+
+.form2 input::placeholder, 
+.form2 input[type=submit],
+.form2 input[type=email] {
+	font-size: 1vw;
 }
 
 .last p {
@@ -197,9 +209,62 @@ input::placeholder {
 .navEnd a {
 	display: inline-block;
 	padding-left: 20px;
-	color: #000;
+	color: #000000; 
 	text-decoration: none;
 	margin: 12.8px;
+	margin-right: 0;
+}
+
+.form1 {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	padding: 30px;
+}
+
+.flexInput {
+	width: 100%;
+	flex-grow: 1;
+}
+
+.flexHeader {
+	flex-shrink: 0;
+	padding-right: 30px;
+}
+
+.form input[type=email] {
+	border: 1px solid #000;
+	padding: 15px;
+	background-color: #E8E8E8;
+	width: 100%;
+}
+
+.form input[type=submit] {
+	color: #E8E8E8;
+	background-color: #343638;
+	padding: 16px;
+	border: none; /*1px solid #343638;*/
+}
+
+.form2 input[type=email] {
+	width: 68%;
+	float: left;
+}
+
+.justify {
+	text-align: justify;
+}
+
+.form2 input[type=submit] {
+	width: 32%;	
+}
+
+.form2 input[type=email]{
+	padding: 6px;
+}
+
+.form2 input[type=submit] {
+	padding: 7px;
 }
 
 footer {
@@ -211,15 +276,15 @@ footer {
 }
 
 .flex-container2>div{
-
+	padding: 2px;
+	width: 25%;
 }
 
-/*color {
-#B7C8D9
-#F3F3F3
-#A4A4A4
-#F0F0F0
-#343638
-#E8E8E8
-#9E9E9E;
-}*/
+.flex-container2 p, 
+.flex-container2 address{
+	color: #9E9E9E
+}
+
+.lastTweetSpan {
+	color: #E8E8E8;
+}
