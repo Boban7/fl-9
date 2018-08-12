@@ -23,3 +23,44 @@
 }
 
 /* Your styles go here */
+*,
+body {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*---- large ----*/
+body {
+  background-color: var(--bg-color--dark);
+}
+
+p {
+  color: var(--thumbnail--description);
+}
+
+.section1, section {
+  width: 50%;
+}
+
+.image {
+  width: 30%;
+}
+
+h1, h2 {
+  color: var(--article-title);
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.image img {
+  max-height: 300px;
+  width: auto;
+}
