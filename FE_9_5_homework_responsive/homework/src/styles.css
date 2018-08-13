@@ -261,4 +261,11 @@ body {
     box-shadow: 7px 7px 7px #bbb;
   }
 
+  .up:hover {
+    bottom: 32px;
+    right: 31px;
+    padding: 22px;
+    box-shadow: 7px 7px 7px #888;
+  }
+
 }
