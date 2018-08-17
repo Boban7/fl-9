@@ -1,5 +1,5 @@
 const side1 = parseFloat(prompt('Enter lenght of first side'));
-const side2 = parseFloat(prompt('Enter lenght of first side'));
+const side2 = parseFloat(prompt('Enter lenght of second side'));
 const angle = parseFloat(prompt('Enter angle'));
 let message = '‘Invalid data’';
 
