@@ -1,18 +1,18 @@
-const price = 				prompt('Input amount of money: ');
-const discount = 			prompt('Input the discount : ');
-const saved = 				price * discount / 100;
-const priceWithDiscount = 	price - saved;
+const PRICE = 				prompt( 'Input price: ' );
+const DISCOUNT = 			prompt( 'Input the discount : ' );
+const SAVED = 				PRICE * DISCOUNT / 100;
+const PRICE_WITH_DISCOUNT = 	PRICE - SAVED;
 let message = 				'’Invalid data’';
 
-function myRound(x) {
-	return x % 1 ? (Math.floor(x * 100)/100).toFixed(2) : x;
+function myRound( x ) {
+	return x % 1 ? ( Math.floor( x * 100 )/100 ).toFixed( 2 ) : x;
 } 
 
-if(price && discount && price >= 0 && discount >= 0 && discount <= 100) {
-	message = 	'Price without discount: ' + myRound(price) + '\n' +
-				'Discount: ' + myRound(discount) + '%\n' + 
-				'Price with discount: ' + myRound(priceWithDiscount) + '\n' +
-				'Saved: ' + myRound(saved);
+if( PRICE && DISCOUNT && PRICE >= 0 && DISCOUNT >= 0 && DISCOUNT <= 100 ) {
+	message = 	'Price without discount: ' + myRound( PRICE ) + '\n' +
+				'Discount: ' + myRound( DISCOUNT ) + '%\n' + 
+				'Price with discount: ' + myRound( PRICE_WITH_DISCOUNT ) + '\n' +
+				'Saved: ' + myRound( SAVED );
 }
 
 console.log(message);
