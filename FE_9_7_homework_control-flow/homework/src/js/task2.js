@@ -30,6 +30,7 @@ const GAME = {
 		this.casinoNumber 		= 0; 
 		this.userVariant 		= 0; 	
 		this.to 				*= 2;
+		this.startGame( );
 	},
 	startNewGame	: function( ) {
 		this.casinoNumber 		= 0; 
@@ -41,7 +42,9 @@ const GAME = {
 			POSSIBLE_BASE_ATTEMPT_1, 
 			POSSIBLE_BASE_ATTEMPT_2, 
 			POSSIBLE_BASE_ATTEMPT_3
-		]
+		];
+		this.startGame( );
+				
 	},
 	nextAttemptChangePossibleCurrent : function( ) {
 		this.possibleCurrent = this.possibleCurrent.map( function( item ) {
@@ -51,36 +54,33 @@ const GAME = {
 				return Math.floor( item * 3 );
 			}
 		});
+	},
+	startGame : function( ) {
+		this.attemptLeft = 3;
+		this.casinoNumber = Math.floor( Math.random( ) * ( this.to + ONE_TO_RANDOM) );
+		this.nextAttemptChangePossibleCurrent( );
+		for ( let i = 0; i < this.attemptLeft; ) {
+			this.userVariant = this.promptGuess( );
+			if ( this.userVariant === this.casinoNumber ) {
+				this.totalPrize += this.possibleCurrent[ this.attemptLeft ];
+				if( confirm( 'Congratulation! \nYour prize is: ' + this.totalPrize + '$ \nDo you want to continue?')) {
+					this.startNewRange( );
+				}
+			} else {
+				if ( this.attemptLeft === ONE_TOCOMPARE_WITH_ATTEMPT_1 ) {
+					alert( 'Thank you for a game. Your prize is: ' + this.totalPrize + '$');
+					if( confirm( 'Do you want to play again?' ) ) {
+						this.startNewGame( );
+					} 
+				}
+			}
+			this.attemptLeft--;
+		}	
 	}
 } 
 
 if ( !PLAY ) {
 	alert('You did not become a millionaire, but can.')
 } else { 
-	startGame( );
-}
-
-function startGame( ) {
-	GAME.attemptLeft = 3;
-	GAME.casinoNumber = Math.floor( Math.random( ) * ( GAME.to + ONE_TO_RANDOM) );
-	GAME.nextAttemptChangePossibleCurrent( );
-	for ( let i = 0; i < GAME.attemptLeft; ) {
-		GAME.userVariant = GAME.promptGuess( );
-		if ( GAME.userVariant === GAME.casinoNumber ) {
-			GAME.totalPrize += GAME.possibleCurrent[ GAME.attemptLeft ];
-			if( confirm( 'Congratulation! \nYour prize is: ' + GAME.totalPrize + '$ \nDo you want to continue?')) {
-				GAME.startNewRange( );
-				startGame( );
-			}
-		} else {
-			if ( GAME.attemptLeft === ONE_TOCOMPARE_WITH_ATTEMPT_1 ) {
-				alert( 'Thank you for a game. Your prize is: ' + GAME.totalPrize + '$');
-				if( confirm( 'Do you want to play again?' ) ) {
-					GAME.startNewGame( );
-					startGame( );
-				} 
-			}
-		}
-		GAME.attemptLeft--;
-	}	
+	GAME.startGame( );
 }
