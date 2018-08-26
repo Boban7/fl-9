@@ -1,1 +1,3 @@
-// Your code goes here
+function isPrime(parameter) {
+	return parameter !== null && typeof parameter === 'number';
+}

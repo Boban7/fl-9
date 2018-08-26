@@ -1,6 +1,9 @@
 function getMin() {
-	return arguments;
+	let min = arguments[0];
+	for(let i = 1; i < arguments.length; i++) {
+		if (arguments[i] < min) {
+			min = arguments[i];
+		}
+	}
+	return min;
 }
-//points.sort(function(a, b){return b - a})[0]
-
-console.log( 'getMin( -1, 8, 0, -30, 100 ): ' + getMin( -1, 8, 0, -30, 100 ) );
