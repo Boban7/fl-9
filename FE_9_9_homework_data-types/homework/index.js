@@ -1,39 +1,91 @@
-// Your code goes here
+function findType(param) {
+  return typeof param;
+}
 
-
-/*
-[
-  {
-    "_id": "5b5e3168c6bf40f2c1235cd6",
-    "index": 0,
-    "age": 39,
-    "eyeColor": "green",
-    "name": "Stein",
-    "favoriteFruit": "apple"
-  },
-  {
-    "_id": "5b5e3168e328c0d72e4f27d8",
-    "index": 1,
-    "age": 38,
-    "eyeColor": "blue",
-    "name": "Cortez",
-    "favoriteFruit": "strawberry"
-  },
-  {
-    "_id": "5b5e3168cc79132b631c666a",
-    "index": 2,
-    "age": 2,
-    "eyeColor": "blue",
-    "name": "Suzette",
-    "favoriteFruit": "apple"
-  },
-  {
-    "_id": "5b5e31682093adcc6cd0dde5",
-    "index": 3,
-    "age": 17,
-    "eyeColor": "green",
-    "name": "Weiss",
-    "favoriteFruit": "banana"
+//this function only run throuth array and do something - but nothing return
+function forEach(array, functionToEachItem) {
+  for(let i = 0; i < array.length; i++) {
+    functionToEachItem(array[i]);
   }
-]
-*/
+}
+
+//this function return new array with transformed value
+function map(array, functionToMap) {
+  let resultArray = [];
+
+  forEach(array, elem => resultArray.push(functionToMap(elem)));
+  return resultArray;
+}
+
+
+function filter(array, functionToFilter) {
+  let resultArray = [];
+
+  forEach(array, function(elem) {
+    if (functionToFilter(elem)) {
+      resultArray.push(elem);
+    }
+  });
+  return resultArray;
+}
+
+
+function getAdultAppleLovers(inputData) {
+  let resultArrayObject;
+  let resultName;
+
+  resultArrayObject = filter(inputData, function(el) {
+    return el.age > 18 && el.favoriteFruit === 'apple'; 
+  });
+  resultName = map(resultArrayObject, function(el) {
+    return el.name;
+  })
+  return resultName;
+}
+
+
+function keys(obj) {
+  let resultArray = [];
+  for (let key in obj) {
+    if(Object.prototype.hasOwnProperty.call(obj, key)) {
+      resultArray.push(key);
+    }
+  }
+  return resultArray;
+}
+
+
+function values(obj) {
+  let resultArray = [];
+  for (let key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      resultArray.push(obj[key]);
+    }    
+  }
+  return resultArray;
+}
+
+
+function showFormattedDate(x) {
+  let monthLength3Letter = function(date) {
+    const numberLetterOfMonth = 3;
+    const zeroIndexInMonthName = 0;
+    let month = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December'
+    ];
+
+    return month[date.getMonth()].slice(zeroIndexInMonthName, numberLetterOfMonth);
+  }
+    return `It is ${x.getDate()} of ${monthLength3Letter(x)}, ${x.getFullYear()}`;
+}
