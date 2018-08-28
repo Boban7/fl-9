@@ -17,11 +17,10 @@ function map(array, functionToMap) {
   return resultArray;
 }
 
-
 function filter(array, functionToFilter) {
   let resultArray = [];
 
-  forEach(array, function(elem) {
+  forEach(array, elem => {
     if (functionToFilter(elem)) {
       resultArray.push(elem);
     }
@@ -29,20 +28,16 @@ function filter(array, functionToFilter) {
   return resultArray;
 }
 
-
 function getAdultAppleLovers(inputData) {
   let resultArrayObject;
   let resultName;
 
-  resultArrayObject = filter(inputData, function(el) {
-    return el.age > 18 && el.favoriteFruit === 'apple'; 
+  resultArrayObject = filter(inputData, el => {
+    return el.age > 18 && el.favoriteFruit === 'apple';
   });
-  resultName = map(resultArrayObject, function(el) {
-    return el.name;
-  })
+  resultName = map(resultArrayObject, el => el.name);
   return resultName;
 }
-
 
 function keys(obj) {
   let resultArray = [];
@@ -54,23 +49,21 @@ function keys(obj) {
   return resultArray;
 }
 
-
 function values(obj) {
   let resultArray = [];
   for (let key in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
       resultArray.push(obj[key]);
-    }    
+    }
   }
   return resultArray;
 }
 
-
 function showFormattedDate(x) {
-  let monthLength3Letter = function(date) {
+  const monthLength3Letter = (date) => {
     const numberLetterOfMonth = 3;
     const zeroIndexInMonthName = 0;
-    let month = [
+    const month = [
       'January',
       'February',
       'March',
