@@ -4,7 +4,7 @@ function findType(param) {
 
 //this function only run throuth array and do something - but nothing return
 function forEach(array, functionToEachItem) {
-  for(let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     functionToEachItem(array[i]);
   }
 }
