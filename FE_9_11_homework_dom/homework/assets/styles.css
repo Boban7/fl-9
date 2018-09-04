@@ -1,0 +1,81 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+*,
+body {
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+.root {
+	position: relative;
+	min-height: 100%;
+	padding: 25px;
+}
+
+.header {
+	padding: 25px;
+}
+
+.headerHeading {
+	text-align: center;
+	font-weight: normal;
+	margin-top: 0;
+}
+
+.notification {
+	text-align: center;
+	color: red;
+}
+
+.form {
+	display: inline-block;
+	width: 100%;
+}
+
+.divToInput {
+	overflow: hidden;
+	padding-left: 40px;
+}
+
+.input {
+	width: 100%;
+}
+
+.box, .delete {
+	position: relative;
+	top: 5px;
+}
+
+.add {
+	float: right;
+	border: none;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	padding: 25px;
+}
+
+.paw {
+	max-height: 100px;
+	width: auto;
+}
+
+.delete {
+	float: right;
+}
+
+ul {
+	list-style-type: none;
+}
