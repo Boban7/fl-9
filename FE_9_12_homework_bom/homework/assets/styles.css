@@ -1,0 +1,53 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.root {
+	margin: 20px auto 0;
+	border: 1px solid #000;
+	width: 800px;
+	display: flex;
+	flex-direction: column;
+}
+
+.mainPage{
+	width: 100%;
+}
+
+.heading, .emptyComment {
+	width: 100%;
+	text-align: center;
+	margin: 50px auto;
+}
+
+.buttonAdd, .save, .cancel {
+	font-family: Arial, sans-sherif;
+	padding: 0px 20px;
+	border-radius: 10px;
+	font-size: 150%;
+	margin: 15px;
+}
+
+.buttonAdd {
+	float: right;
+	display: block;
+	margin: 5px;
+}
+
+.emptyComment {
+	font-size: 1.8em;
+}
+
+.form {
+	text-align: center;
+}
+
+label {
+	font-size: 2em;
+}
+
+.hide {
+	display: none;
+}
