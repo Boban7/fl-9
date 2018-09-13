@@ -31,7 +31,6 @@ function addingNewItem() {
 	}
 	if(newInput.value && newInput.value !== null) {
 		renderSomeItem(newInput.value);
-		newInput.value = '';
 	}
 }
 
@@ -185,6 +184,7 @@ hide(modify);
 window.location.hash = 'main';
 //listen button Add
 buttonAdd.addEventListener('click', () => {
+	newInput.value = '';
 	window.location.hash = 'add';
 })
 
