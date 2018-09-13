@@ -220,3 +220,4 @@ function listenButtonsForChangeHashToMain() {
 window.addEventListener('hashchange', (e) => {
 	change(document.getElementById(getHashFromUrl(e.oldURL)), document.getElementById(getHashFromUrl(e.newURL)));
 });
+
