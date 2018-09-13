@@ -5,32 +5,29 @@
   <title>Homework 12 - Simple TODO List</title>
   <link rel="stylesheet" href="./assets/styles.css">
 </head>
-<body>
-  <div id="root" class="root">
-  	<div id="main" class="main">
-  		<button id="buttonAdd" class="buttonAdd">Add new task</button>
-  		<h1 class="heading">Simple TODO aplication</h1>
-  		<div id="items">
-  			<p id="emptyComment" class="emptyComment">TODO is empty</p>
-  			<div id="parent"></div>
-  		</div>
-  	</div>
-  	<div id="add">
-  		<form method="GET" action="#" class="form">
-  			<label>Input here new item:</label><br>
-  			<input id="newItem" class="newItem" name="newItem" type="plain" size="50"><br/>
-  			<input id="saveNew" class="save" type="submit" value="Save change">
-  			<input id="cancelNew" class="cancel" type="submit" value="Cancel">
-  		</form>
-  	</div>
-  	<div id="modify">
-  		<form method="GET" action="#" class="form">
-  			<label>Modify this item:</label><br>
-  			<input id="modify" class="new" name="new" type="plain" size="50"><br/>
-  			<input id="saveModify" class="save" type="submit" value="Save change">
-  			<input id="cancelModify" class="cancel" type="submit" value="Cancel">
-  		</form>
-  	</div>
+<body onload="loadItemFromLocalStorage()">
+  <div id="root">
+    <h1>TODO list</h1>
+    <div id="main">
+      <h2>Main page</h2>
+      <button id="buttonAdd">Add</button>
+      <p id="emptyComment">List is empty</p>
+      <ul id="parentUl"></ul>
+    </div>
+    <div id="add">
+      <h2>Add new</h2>
+      <label>New item:</label>
+      <input id="newInput">
+      <input id="newSubmit" type="submit" value="Submit">
+      <input id="newCancel" type="submit" value="Cancel">
+    </div>
+    <div id="modify">
+      <h2>Modify</h2>
+      <label>Modify this:</label>
+      <input id="modifyInput">
+      <input id="modifySubmit" type="submit" value="Submit">
+      <input id="modifyCancel" type="submit" value="Cancel">
+    </div>
   </div>
 
   <script src="./src/app.js"></script>

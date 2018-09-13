@@ -1,53 +1,51 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+body {
+	background-color: #aff;
 }
 
-.root {
-	margin: 20px auto 0;
+div {
 	border: 1px solid #000;
-	width: 800px;
-	display: flex;
-	flex-direction: column;
-}
-
-.mainPage{
-	width: 100%;
-}
-
-.heading, .emptyComment {
-	width: 100%;
+	margin: 10px;
+	padding: 30px;
 	text-align: center;
-	margin: 50px auto;
 }
 
-.buttonAdd, .save, .cancel {
-	font-family: Arial, sans-sherif;
-	padding: 0px 20px;
-	border-radius: 10px;
-	font-size: 150%;
-	margin: 15px;
+ul {
+	list-style-type: none;
+	padding: 0 20%;
 }
 
-.buttonAdd {
-	float: right;
-	display: block;
+li {
 	margin: 5px;
-}
-
-.emptyComment {
-	font-size: 1.8em;
-}
-
-.form {
-	text-align: center;
-}
-
-label {
-	font-size: 2em;
+	text-align: left;
+	border: 1.5px dashed blue;
 }
 
 .hide {
 	display: none;
+}
+
+span {
+	font-size: 250%;
+}
+
+#toDelete {
+	position: fixed;
+	background-color: red;
+	right: 100px;
+}
+
+img[alt=remove] {
+	float: right;
+}
+
+img:hover,
+span:hover,
+#buttonAdd:hover {
+	outline: 4px solid blue;
+	cursor: pointer;
+}
+
+img[alt=done]:hover {
+	outline: none;
+	cursor: default;
 }
